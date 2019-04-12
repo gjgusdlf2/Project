@@ -23,6 +23,5 @@ auth=(()=>{
 			})
 		})
 	};
-
 	return {init:init};
 })();
