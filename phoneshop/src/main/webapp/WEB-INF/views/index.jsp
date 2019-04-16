@@ -38,7 +38,7 @@
       <a class="navbar-brand" href="#">Portfolio</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
+      <ul id="navl" class="nav navbar-nav">
         <li class="active"><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Gallery</a></li>
@@ -104,7 +104,7 @@
 <footer class="container-fluid text-center">
   <p>Footer Text</p>
 </footer>
-
+<script src="<%=application.getContextPath()%>/resources/js/cmm/util.js"></script>
 <script src="<%=application.getContextPath()%>/resources/js/app.js"></script>
 <script src="<%=application.getContextPath()%>/resources/js/compo/compo.js"></script>
 <script src="<%=application.getContextPath()%>/resources/js/cust/cust.js"></script>

@@ -23,11 +23,15 @@ cust=(()=>{
 		$('#maincontent1').empty();
 		/*$.getScript(compojs,()=>{*/
 			$(compo.cust_login()).appendTo('#maincontent');
-			$('input[type=submit]').click(()=>{
+			$('input[type=submit]').click(e=>{
+				e.preventDefault();
+				alert('로그인 들어가기');
 				let data={
 						customerID : $('input[name=customerID]').val(),
 						password : $('input[name=password]').val()
 				};
+				alert('id :'+data.customerID);
+				alert('password :'+data.password);
 				$.ajax({
 					url : $.ctx()+'/customers/'+data.customerID,
 					type : 'post',
@@ -40,20 +44,19 @@ cust=(()=>{
 							alert('로그인 성공'+d.customerID);
 							$('#maincontent').html(compo.login_in());
 							$('#loginbtn')
-								.html('<a href="#"><span id="loging_glyphicon" class="glyphicon glyphicon-off"></span> LogOut</a>');
-							$('#loginbtn').click(e=>{
-								alert('')
-							});
-							$('.navbar-brand').empty();
-							$('#myNavbar').empty();
-							let arr =[{
+								.html('<a href="#"><span id="loging_glyphicon" class="glyphicon glyphicon-off"></span> LogOut</a>')
+								.click(()=>{
+									alert('로그아웃');
+									$('#loginbtn').html('<a href="#"><span id="loging_glyphicon" class="glyphicon glyphicon-log-in"></span> Login</a>');
+								});
+							/*$('.navbar-brand').empty();*/
+							/*$('#myNavbar'+' ul.#navl').empty();*/
+/*							let arr =[{
 									txt:'홈',name:'home'
 							},{
-									txt:'마이페이지',name:'mypage'
+									txt:'구매내',name:'mypage'
 							},{
 									txt:'정보수정',name:'up'
-							},{
-									txt:'장바구니',name:'box'
 							},{
 									txt:'회원탈퇴',name:'del'
 							}];
@@ -64,10 +67,10 @@ cust=(()=>{
 								.attr('name','j.name')
 								.appendTo('#myNavbar ul')
 								.click(function(){
-									let thta = $(this).attr('name');
+									let that = $(this).attr('name');
 									
 								});
-							});
+							});*/
 						}else {
 							alert('로그인 실패');
 						};

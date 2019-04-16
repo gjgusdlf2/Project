@@ -19,8 +19,14 @@ auth=(()=>{
 			$.getScript(compojs,()=>{
 				$('#loginbtn').click(e=>{
 					cust.login();
-				});			
+					alert('cust 넘어가기>>>>>>>>>>>>>>>>>>>>>>');
+				});
 			})
+			$('.navbar-header').html(' <a class="navbar-brand" href="#">Home</a>')
+			.click(e=>{
+				
+			});
+			$('#myNavbar'+' #navl').remove();
 		})
 	};
 	return {init:init};
