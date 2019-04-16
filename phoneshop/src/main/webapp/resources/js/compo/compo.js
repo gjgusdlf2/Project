@@ -9,7 +9,7 @@ compo={
 			+'    <div class="row">'
 			+'      <h2 style="text-align:center">Login with Social Media or Manually</h2>'
 			+'      <div class="vl">'
-			+'        <span class="vl-innertext">or</span>'
+			+'        <span class="vl-innertext">or</span>'s
 			+'      </div>'
 			
 			+'      <div class="col">'
