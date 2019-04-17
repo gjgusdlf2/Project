@@ -24,9 +24,11 @@ auth=(()=>{
 			})
 			$('.navbar-header').html(' <a class="navbar-brand" href="#">Home</a>')
 			.click(e=>{
-				
+				alert('홈버튼 클릭');
 			});
 			$('#myNavbar'+' #navl').remove();
+			$('#maincontent').empty();
+			/*$.each(arr,(i,j)=>{})*/
 		})
 	};
 	return {init:init};
