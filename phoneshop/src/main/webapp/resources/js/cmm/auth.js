@@ -28,7 +28,27 @@ auth=(()=>{
 			});
 			$('#myNavbar'+' #navl').remove();
 			$('#maincontent').empty();
-			/*$.each(arr,(i,j)=>{})*/
+			let arr=[{
+				txt : '갤럭시 S8 S8+', name : 's8'
+			},{
+				txt : '갤럭시 노트8', name : 'note8'
+			},{
+				txt : '갤럭시 S9 S9+', name : 's9'
+			},{
+				txt : '갤럭시 노트9', name : 'note9'
+			}];
+			$.each(arr,(i,j)=>{
+				$('<div class="row">'+
+						'<div class="col-sm-3">'+
+						'<img src="resources/img/'+j.name+'.jpg" class="img-responsive" style="width:100%" alt="Image">'
+							+'<p>'+j.txt+'</p></div>')
+				.attr('name',j.name)
+				.attr('id', j.name)
+				.appendTo('.row')
+				.click(function(){
+					
+				});
+			});
 		})
 	};
 	return {init:init};

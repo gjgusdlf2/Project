@@ -20,7 +20,6 @@ cust=(()=>{
 	};
 	let login=()=>{
 		$('#maincontent').empty();
-		$('#maincontent1').empty();
 		/*$.getScript(compojs,()=>{*/
 			$(compo.cust_login()).appendTo('#maincontent');
 			$('input[type=submit]').click(e=>{
