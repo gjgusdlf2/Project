@@ -11,7 +11,7 @@ import com.phoneshop.web.mapper.ImageMapper;
 
 @Service
 public class ImageServiceImpl implements ImageService{
-	@Autowired ImageMapper img;
+	@Autowired ImageMapper imgmap;
 	@Override
 	public void createImage(ImageDTO img) {
 		// TODO Auto-generated method stub

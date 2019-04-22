@@ -6,5 +6,5 @@ import lombok.Data;
 
 @Data @Component
 public class OrderDTO {
-	private String orderID,CustomerID,employeeID,orderDate,shipperID;
+	private String orderID,customerID,orderData,phoneID;
 }

@@ -11,7 +11,7 @@ import com.phoneshop.web.mapper.SupplierMapper;
 
 @Service
 public class SupplierServiceImpl implements SupplierService{
-	@Autowired SupplierMapper sup;
+	@Autowired SupplierMapper supmap;
 	@Override
 	public void createSupplier(SupplierDTO sup) {
 		// TODO Auto-generated method stub

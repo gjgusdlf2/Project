@@ -26,6 +26,7 @@ auth=(()=>{
 			.click(e=>{
 				alert('홈버튼 클릭');
 			});
+			/*$('.carousel-inner').html('<img src="resources/img/kakao.png" alt="Los Angeles" style="width:100%;">');*/
 			$('#myNavbar'+' #navl').remove();
 			$('#maincontent').empty();
 			let arr=[{
@@ -44,7 +45,7 @@ auth=(()=>{
 							+'<p>'+j.txt+'</p></div>')
 				.attr('name',j.name)
 				.attr('id', j.name)
-				.appendTo('.row')
+				.appendTo('.col-sm-3')
 				.click(function(){
 					
 				});

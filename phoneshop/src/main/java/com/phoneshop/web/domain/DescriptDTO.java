@@ -5,6 +5,6 @@ import org.springframework.stereotype.Component;
 import lombok.Data;
 
 @Data @Component
-public class CategoryDTO {
-	private String categoryID,categoryName,description;
+public class DescriptDTO {
+	String descriptNum,descriptName;
 }

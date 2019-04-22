@@ -11,7 +11,7 @@ import com.phoneshop.web.mapper.OrderMapper;
 
 @Service
 public class OrderServiceImpl implements OrderService{
-	@Autowired OrderMapper ord;
+	@Autowired OrderMapper ordamp;
 	@Override
 	public void createOrder(OrderDTO ord) {
 		// TODO Auto-generated method stub

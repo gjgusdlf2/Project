@@ -6,50 +6,50 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.phoneshop.web.domain.OrderDetailDTO;
-import com.phoneshop.web.mapper.OrderDetailMapper;
+import com.phoneshop.web.domain.DescriptDTO;
+import com.phoneshop.web.mapper.DescriptMapper;
 
 @Service
-public class OrderDetailServiceImpl implements OrderDetailService{
-	@Autowired OrderDetailMapper tail;
+public class DescriptServiceImpl implements DescriptService{
+	@Autowired DescriptMapper desmap;
 	@Override
-	public void createOrderDetail(OrderDetailDTO tail) {
+	public void createDescript(DescriptDTO des) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public List<OrderDetailDTO> findAllOrderDetail(HashMap<String, Object> map) {
+	public List<DescriptDTO> findAllDescript(HashMap<String, Object> map) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<OrderDetailDTO> findSomeOrderDetails(HashMap<String, Object> map) {
+	public List<DescriptDTO> findSomeDescripts(HashMap<String, Object> map) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public OrderDetailDTO findOneOrderDetail(OrderDetailDTO tail) {
+	public DescriptDTO findOneDescript(DescriptDTO des) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public int countOrderDetail() {
+	public int countDescripts() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public void uploadOrderDetail(OrderDetailDTO tail) {
+	public void uploadDescript(DescriptDTO des) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void removeOrderDetail(OrderDetailDTO tail) {
+	public void removeDescript(DescriptDTO des) {
 		// TODO Auto-generated method stub
 		
 	}

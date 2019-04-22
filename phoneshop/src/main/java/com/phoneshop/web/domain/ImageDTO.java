@@ -6,5 +6,5 @@ import lombok.Data;
 
 @Data @Component
 public class ImageDTO {
-	private String imgSeq,imgName,imgExtention,owner;
+	private String imageNum,imageName;
 }

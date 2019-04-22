@@ -6,5 +6,5 @@ import lombok.Data;
 
 @Data @Component
 public class ProductDTO {
-	private String productID,productName,supplierID,categoryID,unit,price;
+	private String productID,productName,color,price,imageNum,descriptNum;
 }

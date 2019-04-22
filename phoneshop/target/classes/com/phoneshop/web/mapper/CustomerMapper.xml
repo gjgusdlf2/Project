@@ -9,13 +9,12 @@
 SELECT 
 	CUSTOMER_ID customerID,
 	CUSTOMER_NAME customerName,
-	PASSWORD,
-	SSN,
-	PHOTO,
+	phone,
 	PHONE,
 	CITY,
 	ADDRESS,
-	POSTALCODE
+	POSTALCODE,
+	POSITION
 FROM CUSTOMERS
 WHERE CUSTOMER_ID LIKE #{customerID}
 		<if test="password !=null">
