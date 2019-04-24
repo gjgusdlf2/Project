@@ -8,11 +8,11 @@ app=(()=>{
 		setContentView();
 	};
 	let setContentView=()=>{
-		
 		$.when(
 				$.getScript($.js()+'/cmm/auth.js'),
 				$.getScript($.js()+'/cust/cust.js'),
-				$.getScript($.js()+'/compo/compo.js')
+				$.getScript($.js()+'/compo/compo.js'),
+				$.getScript($.js()+'/phone/phone.js')
 		).done(()=>{
 			auth.init();
 		})

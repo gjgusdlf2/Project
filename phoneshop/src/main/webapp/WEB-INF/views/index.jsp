@@ -64,15 +64,15 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-        <img src="la.jpg" alt="Los Angeles" style="width:100%;">
+        <img src="resources/img/kakao.png" style="width:100%;">
       </div>
 
       <div class="item">
-        <img src="chicago.jpg" alt="Chicago" style="width:100%;">
+        <img src="resources/img/kakaoo.png" style="width:100%;">
       </div>
     
       <div class="item">
-        <img src="ny.jpg" alt="New york" style="width:100%;">
+        <img src="resources/img/kaa.png" style="width:100%;">
       </div>
     </div>
 
@@ -120,6 +120,7 @@
 <script src="<%=application.getContextPath()%>/resources/js/compo/compo.js"></script>
 <script src="<%=application.getContextPath()%>/resources/js/cust/cust.js"></script>
 <script src="<%=application.getContextPath()%>/resources/js/router.js" ></script>
+<script src="<%=application.getContextPath()%>/resources/js/phone/phone.js"></script>
 <script>
 app.init('<%=application.getContextPath()%>');
 </script>

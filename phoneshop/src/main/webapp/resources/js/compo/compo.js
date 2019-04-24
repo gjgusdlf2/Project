@@ -30,7 +30,7 @@ compo={
 			+'        </div>'
 			+''
 			+'        <input type="text" name="customerID" placeholder="ID" required>'
-			+'        <input type="password" name="password" placeholder="Password" required>'
+			/*+'        <input type="text" name="value" placeholder="Password" required>'*/
 			+'        <input type="submit" value="Login">'
 			+'      </div>'
 			
@@ -50,7 +50,7 @@ compo={
 			+'</div>';
 		},
 		login_in : ()=>{
-			return '<div id="maincontent" class="container-fluid bg-3 text-center">'
+			return '<div id="maincontent" class="container-fluid bg-3 text-center">    '
 			+'  <h3>Some of my Work</h3><br>'
 			+'  <div class="row">'
 			+'    <div class="col-sm-3">'
@@ -72,26 +72,7 @@ compo={
 			+'  </div>'
 			+'</div><br>'
 
-			+'<div id="maincontent1" class="container-fluid bg-3 text-center">    '
-			+'  <div class="row">'
-			+'    <div class="col-sm-3">'
-			+'      <p>Some text..</p>'
-			+'      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">'
-			+'    </div>'
-			+'    <div class="col-sm-3"> '
-			+'      <p>Some text..</p>'
-			+'      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">'
-			+'    </div>'
-			+'    <div class="col-sm-3"> '
-			+'      <p>Some text..</p>'
-			+'      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">'
-			+'    </div>'
-			+'    <div class="col-sm-3">'
-			+'      <p>Some text..</p>'
-			+'      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">'
-			+'    </div>'
-			+'  </div>'
-			+'</div><br><br>';
+			+'<br><br>';
 		},
 		join_in : ()=>{
 			return '<h2>Responsive Checkout Form</h2>'
