@@ -12,7 +12,9 @@ app=(()=>{
 				$.getScript($.js()+'/cmm/auth.js'),
 				$.getScript($.js()+'/cust/cust.js'),
 				$.getScript($.js()+'/compo/compo.js'),
-				$.getScript($.js()+'/phone/phone.js')
+				$.getScript($.js()+'/phone/phone.js'),
+				$.getScript($.js()+'/prd/prd.js'),
+				$.getScript($.js()+'/admin/ad.js')
 		).done(()=>{
 			auth.init();
 		})

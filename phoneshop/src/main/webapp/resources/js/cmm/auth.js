@@ -1,12 +1,14 @@
 "use strict";
 var auth=auth||{};
 auth=(()=>{
-	let compojs,js,custjs,phonejs;
+	let compojs,js,custjs,phonejs,prdjs,adjs;
 	let init=()=>{
 		js = $.js();
 		phonejs = js+'/phone/phone.js';
 		compojs = js+'/compo/compo.js';
 		custjs = js+'/cust/cust.js';
+		prdjs = js+'/prd/prd.js';
+		adjs = js+'/admin/ad.js';
 		onCreate();
 	};
 	let onCreate=()=>{
@@ -16,20 +18,23 @@ auth=(()=>{
 		$.when(
 			$.getScript(compojs),
 			$.getScript(custjs),
-			$.getScript(phonejs)
+			$.getScript(phonejs),
+			$.getScript(prdjs),
+			$.getScript(adjs)
 		).done(()=>{
 			$.getScript(compojs,()=>{
 				$('#loginbtn').click(e=>{
 					cust.login();
-					alert('cust 넘어가기>>>>>>>>>>>>>>>>>>>>>>');
+					$('#navl')
 				});
 			})
 			$('.navbar-header').html(' <a class="navbar-brand" href="#">Home</a>')
 			.click(e=>{
-				alert('홈으로가기!');
-				$(compo.login_in());
+				alert('홈버튼 진입');
+				$('#maincontent').appendTo(compo.login_in());
+				$('#loginbtn').html('<a href="#"><span id="loging_glyphicon" class="glyphicon glyphicon-off"></span> LogOut</a>');
 			});
-			$('#myNavbar'+' #navl').empty();
+			$('#navl').empty();
 			$('#maincontent').empty();
 			let arr=[{
 				txt : '갤럭시 S8 S8+', name : 's8'

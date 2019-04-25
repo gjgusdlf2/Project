@@ -115,6 +115,8 @@
 <footer class="container-fluid text-center">
   <p>Footer Text</p>
 </footer>
+<script src="<%=application.getContextPath()%>/resources/js/admin/ad.js"></script>
+<script src="<%=application.getContextPath()%>/resources/js/prd/prd.js"></script>
 <script src="<%=application.getContextPath()%>/resources/js/cmm/util.js"></script>
 <script src="<%=application.getContextPath()%>/resources/js/app.js"></script>
 <script src="<%=application.getContextPath()%>/resources/js/compo/compo.js"></script>
