@@ -30,25 +30,27 @@ auth=(()=>{
 			})
 			$('.navbar-header').html(' <a class="navbar-brand" href="#">Home</a>')
 			.click(e=>{
-				alert('홈버튼 진입');
 				$('#maincontent').appendTo(compo.login_in());
-				$('#loginbtn').html('<a href="#"><span id="loging_glyphicon" class="glyphicon glyphicon-off"></span> LogOut</a>');
+				$('#loginbtn').html('<a href="#"><span id="loging_glyphicon" class="glyphicon glyphicon-off"></span> LogOut</a>')
+				.click(()=>{
+					$('#loginbtn').html('<a href="#"><span id="loging_glyphicon" class="glyphicon glyphicon-log-in"></span> Login</a>');
+				});
 			});
 			$('#navl').empty();
 			$('#maincontent').empty();
 			let arr=[{
-				txt : '갤럭시 S8 S8+', name : 's8'
+				txt : '삼성 갤럭시 S8 S8+', name : 's8'
 			},{
-				txt : '갤럭시 노트8', name : 'note8'
+				txt : '삼성 갤럭시 노트8', name : 'note8'
 			},{
-				txt : '갤럭시 S9 S9+', name : 's9'
+				txt : '삼성 갤럭시 S9 S9+', name : 's9'
 			},{
-				txt : '갤럭시 노트9', name : 'note9'
+				txt : '삼성 갤럭시 노트9', name : 'note9'
 			}];
 			$.each(arr,(i,j)=>{
 				$('<div class="col-sm-3">'+
 						'<img src="resources/img/'+j.name+'.jpg" class="img-responsive" style="width:100%" alt="Image">'
-							+'<p>'+j.txt+'</p></div>')
+							+'<h2>'+j.txt+'</h2></div>')
 				.attr('name',j.name)
 				.attr('id', j.name)
 				.appendTo('#maincontent')
@@ -59,6 +61,7 @@ auth=(()=>{
 					$(this).siblings().removeClass('active');
 					switch(that){
 					case 's8' :
+						
 						phone.galaxys8();
 						break;
 					case 'note8' :

@@ -30,9 +30,14 @@ phone =(()=>{
 	};
 		let galaxys8=()=>{
 			$('#maincontent').empty();
-			$('.container').html('<div class="col-sm-3">'
-								+'<img src="resources/img/s8.jpg" class="img-responsive" style="width:300%" alt="Image">'
-								+'</div>');
+			$('.container').html('<h2>갤럭시 s8 s8+</h2>'
+					+'<div class="col-sm" style="max-width: 600px;">'
+					+'<img src="resources/img/s8.jpg"  style="width:100%" alt="Image">'
+					+'<div class="col-dm" style="height:600px;">'
+					+'<ul class="phonesize" style="width:auto;">'
+					+'<li style="width: 600px;">'
+					+'</li></ul></div></div>');
+			
 		};
 		let galaxynote8=()=>{};
 		let galaxys9=()=>{};
