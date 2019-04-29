@@ -15,8 +15,8 @@ import com.phoneshop.web.service.CustomerServiceImpl;
 
 
 @RestController
-public class CustomerController {
-	private static final Logger logger = LoggerFactory.getLogger(CustomerController.class);
+public class CustomerCtr {
+	private static final Logger logger = LoggerFactory.getLogger(CustomerCtr.class);
 @Autowired CustomerDTO cust;
 @Autowired CustomerServiceImpl service;
 @Autowired CustomerMapper custMap;

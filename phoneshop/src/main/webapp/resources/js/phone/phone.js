@@ -30,16 +30,22 @@ phone =(()=>{
 	};
 		let galaxys8=()=>{
 			$('#maincontent').empty();
+
 			$('.container').html('<h2>갤럭시 s8 s8+</h2>'
-					+'<div class="col-sm" style="max-width: 600px;">'
-					+'<img src="resources/img/s8.jpg"  style="width:100%" alt="Image">'
-					+'<div class="col-dm" style="height:600px;">'
-					+'<ul class="phonesize" style="width:auto;">'
-					+'<li style="width: 600px;">'
-					+'</li></ul></div></div>');
+					+'<div class="clearfix">'
+					+'<div class="box1">'
+					+'<img src="resources/img/s8.jpg">'
+					+'<div class="box"></div></div></div>');
+			$.getJSON($.ctx()+'/products/price',d=>{
+				$.each(d.list,(i,j)=>{
+					$('<h2>'+j.price+'</h2>').appendTo('.box1');
+				});
+			});
 			
 		};
-		let galaxynote8=()=>{};
+		let galaxynote8=()=>{
+			
+		};
 		let galaxys9=()=>{};
 		let galaxynote9=()=>{};
 	return {init:init,galaxys8:galaxys8};

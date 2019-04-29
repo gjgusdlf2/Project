@@ -61,7 +61,6 @@ auth=(()=>{
 					$(this).siblings().removeClass('active');
 					switch(that){
 					case 's8' :
-						
 						phone.galaxys8();
 						break;
 					case 'note8' :
