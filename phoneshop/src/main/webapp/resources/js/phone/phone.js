@@ -30,15 +30,25 @@ phone =(()=>{
 	};
 		let galaxys8=()=>{
 			$('#maincontent').empty();
-
 			$('.container').html('<h2>갤럭시 s8 s8+</h2>'
 					+'<div class="clearfix">'
 					+'<div class="box1">'
-					+'<img src="resources/img/s8.jpg">'
-					+'<div class="box"></div></div></div>');
+					+'<img src="resources/img/s8.jpg" style="width:100%;"></div>'
+					+'<div class="box2" style="margin-left:50px; float:left; width:50%; height=:300px;"><h2>s8</h2></div><h2>s8+<h/2></div>');
 			$.getJSON($.ctx()+'/products/price',d=>{
 				$.each(d.list,(i,j)=>{
-					$('<h2>'+j.price+'</h2>').appendTo('.box1');
+					$('<a><img src="resources/one.gif">'+j.price+'원'+'</a><br>')
+					.attr('style','cursor:pointer')
+					.appendTo('.box2').click(function(){
+						let that =$(this).attr('price');
+						$(this).addClass('active');
+						$(this).siblings().removeClass('cative');
+						switch(that){
+/*						case 'price':
+							alert('들어옴?');
+							break;*/
+						}
+					});
 				});
 			});
 			
