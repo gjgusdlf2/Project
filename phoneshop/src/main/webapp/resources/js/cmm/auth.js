@@ -53,7 +53,7 @@ auth=(()=>{
 			}];
 			$.each(arr,(i,j)=>{
 				$('<div class="col-sm-3">'+
-						'<img src="resources/img/'+j.name+'.jpg" class="img-responsive" style="width:100%" alt="Image">'
+						'<img src="resources/img/'+j.name+'.jpg" class="img-responsiv" style="width:100%" alt="Image">'
 							+'<h3>'+j.txt+'</h3></div>')
 				.attr('name',j.name)
 				.attr('id', j.name)

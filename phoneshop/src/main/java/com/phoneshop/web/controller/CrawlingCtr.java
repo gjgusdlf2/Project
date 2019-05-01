@@ -19,8 +19,10 @@ public class CrawlingCtr {
 	@GetMapping("/products/price")
 	public Map<String,Object> price() throws Exception{
 		String url = "http://prod.danawa.com/info/?pcode=4925627&cate=12315778";
+		url ="http://prod.danawa.com/info/?pcode=4925745&keyword=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90%20%20%EA%B0%A4%EB%9F%AD%EC%8B%9Cs8%20%ED%94%8C%EB%9F%AC%EC%8A%A4&cate=12315771";
 		Document doc = Jsoup.connect(url).get();
 		Elements elements = doc.select("em.prc_t");
+		System.out.println(elements);
 		String s81 = elements.text();
 		List<ProductDTO> list = new ArrayList<>();
 		map.clear();
@@ -32,6 +34,9 @@ public class CrawlingCtr {
 			System.out.println(s8);
 			list.add(prod);
 		}
+		String s8p = elements.text();
+		
+		/*for(int i=) {}*/
 		map.put("list", list);
 		System.out.println("맵에 들어있는 값"+map.toString());
 		return map;

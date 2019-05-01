@@ -40,7 +40,7 @@
 	<bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
  		<property name="dataSource" ref="dataSource"/>
  		<property name="mapperLocations"
-					value="classpath:com/phoneshop/web/**/*Mapper.mxl"/> 
+					value="classpath:com/phoneshop/web/**/*Mapper.xml"/> 
 	</bean>
 	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
 		 <constructor-arg ref="sqlSessionFactoryBean"/>

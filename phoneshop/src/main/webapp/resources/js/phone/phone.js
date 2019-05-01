@@ -38,7 +38,7 @@ phone =(()=>{
 					+'<div class="box2" style="margin-left:50px; float:left; width:50%; height=:300px;"><h2>s8</h2></div><h2>s8+<h/2></div>');
 			$.getJSON($.ctx()+'/products/price',d=>{
 				$.each(d.list,(i,j)=>{
-					$('<a><img src="resources/one.gif">'+j.price+'원'+'</a><br>')
+					$('<a>'+j.price+'원'+'</a><br>')
 					.attr('style','cursor:pointer')
 					.appendTo('.box2').click(function(){
 						let that =$(this).attr('price');
