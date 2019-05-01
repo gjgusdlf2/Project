@@ -37,7 +37,7 @@ auth=(()=>{
 				});
 			});
 			$('#navl').empty();
-			$('#maincontent').empty();
+			$('.row').empty();
 			let arr=[{
 				txt : '삼성 갤럭시 S8 S8+', name : 's8'
 			},{
@@ -46,19 +46,23 @@ auth=(()=>{
 				txt : '삼성 갤럭시 S9 S9+', name : 's9'
 			},{
 				txt : '삼성 갤럭시 노트9', name : 'note9'
+			},{
+				txt : '애플 아이폰 XR' , name : 'xr'
+			},{
+				txt : '애플 아이폰XS Max', name : 'max'
 			}];
 			$.each(arr,(i,j)=>{
 				$('<div class="col-sm-3">'+
 						'<img src="resources/img/'+j.name+'.jpg" class="img-responsive" style="width:100%" alt="Image">'
-							+'<h2>'+j.txt+'</h2></div>')
+							+'<h3>'+j.txt+'</h3></div>')
 				.attr('name',j.name)
 				.attr('id', j.name)
-				.appendTo('#maincontent')
+				.appendTo('.row')
 				.attr('style','cursor:pointer')
 				.click(function(){
 					let that = $(this).attr('name');
-					$(this).addClass('active');
-					$(this).siblings().removeClass('active');
+/*					$(this).addClass('active');
+					$(this).siblings().removeClass('active');*/
 					switch(that){
 					case 's8' :
 						phone.galaxys8();
@@ -71,6 +75,12 @@ auth=(()=>{
 						break;
 					case 'note9' :
 						phone.galaxynote9();
+						break;
+					case 'xr' :
+						phone.iphonexr();
+						break;
+					case 'max' :
+						phone.iphonexsmax();
 						break;
 					}
 				});

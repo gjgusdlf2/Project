@@ -26,6 +26,7 @@ phone =(()=>{
 			galaxynote8();
 			galaxys9();
 			galaxynote9();
+			iphonexr();
 		});
 	};
 		let galaxys8=()=>{
@@ -54,9 +55,18 @@ phone =(()=>{
 			
 		};
 		let galaxynote8=()=>{
-			
+			$('#maincontent').empty();
+			$('.container').html('<h2>갤럭시 노트8</h2>'
+					+'<div class="clearfix">'
+					+'<div class="box1">'
+					+'<img src="resources/img/note8.jpg" style="width:100%;"></div>'
+					+'<div class="box2" style="margin-left:50px; float:left; width:50%; height=:300px;"></div></div>');
 		};
 		let galaxys9=()=>{};
 		let galaxynote9=()=>{};
-	return {init:init,galaxys8:galaxys8};
+		let iphonexr=()=>{};
+		let iphonexsmax=()=>{};
+	return {init:init,galaxys8:galaxys8,galaxynote8:galaxynote8,galaxys9:galaxys9,
+		galaxynote9:galaxynote9,iphonexr:iphonexr,
+		iphonexsmax:iphonexsmax};
 })();
