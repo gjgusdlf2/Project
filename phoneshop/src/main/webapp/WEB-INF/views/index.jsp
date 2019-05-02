@@ -56,11 +56,11 @@
       </div>
 
       <div class="item">
-        <img src="resources/img/kakaoo.png" style="width:100%;">
+        <img src="resources/img/kakaoo.png" style="width:100%;height:583px;">
       </div>
     
       <div class="item">
-        <img src="resources/img/kaa.png" style="width:100%;">
+        <img src="resources/img/kaa.png" style="width:100%;height:583px;">
       </div>
     </div>
 

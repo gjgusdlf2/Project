@@ -29,7 +29,7 @@ compo={
 			+'          <p>Or sign in manually:</p>'
 			+'        </div>'
 			+''
-			+'        <input type="text" name="customerID" placeholder="ID" required>'
+			+'        <input type="text" name="customerID" placeholder="ID" required value="ha">'
 			/*+'        <input type="text" name="value" placeholder="Password" required>'*/
 			+'        <input type="submit" value="Login">'
 			+'      </div>'

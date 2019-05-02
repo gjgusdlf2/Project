@@ -34,6 +34,7 @@ ad=(()=>{
 		.click(()=>{
 			$('#loginbtn').html('<a href="#"><span id="loging_glyphicon" class="glyphicon glyphicon-log-in"></span> Login</a>');
 			$('#navl').empty();
+			$('#shop-container').empty();
 		});
 		$('#navl').empty();
 		let ar=[{
@@ -73,6 +74,10 @@ ad=(()=>{
 		alert('관리자 회권관리 접근');
 	};
 	let call =()=>{
+		$('#loginbtn').click(e=>{
+			$('shop-container').empty();
+			alert('핸드폰 등록에서 로그아웃');
+		});
 		$('#shop-container').empty();
 		$('<h2 class="h">핸드폰  등록</h2>')
 		.css('margin','0 auto')	
@@ -83,9 +88,48 @@ ad=(()=>{
 		$('<div class="col-sm-3">'
 				+'<h3 style="color:blue;"><u>핸드폰 사진 등록</u></h3>'
 				+'<img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">'
-				+'<bttun'
+				+'<button id="regist">등록</button>'
 				+'</div>').appendTo('.row');
-		alert('관리자 핸드폰등록 접근');
+		$('#regist').click(function(){/*
+			let ok = (this.files[0].name.match(/jpg|gif|png|jpeg/i)) ?true : false;
+			if(ok){
+				let re = new FormDate();
+				re.append('file',this.files[0]);
+				$ajax({
+					url : $.ctx()+'/phones',
+					type : 'post',
+					data : re,
+					async : false,
+					cache : false,
+					contentType : false,
+					processData : false,
+					success : d=>{
+						alert('파일업로드 성공');
+					},
+					error : e=>{
+						alert('파일업로드 실패');
+					}
+				});
+			}else{
+				alert('gif,png,png,jpeg 파일만 등록할수 있습니다.');
+			}
+		*/});
+		$('<div><h2>핸드폰 명:</h2><input text="hidden"></input></div>')
+		.css('width','68%')
+		.css('border','3px solid #444444')
+		.css('height','150px')
+		.css('float','left')
+		.css('margin-top','30px')
+		.appendTo('.row');
+		$('<div>색상</div>')
+		.css('width','150px')
+		.css('height','65px')
+		.css('margin-top','15px')
+		.css('border','1px solid #444444')
+		.css('float','left')
+		.css('padding-top','15px')
+		.css('font-size','30px')
+		.appendTo('.row');
 	};
 	return {init:init,admin:admin,buy:buy,member:member,call:call};
 })();
