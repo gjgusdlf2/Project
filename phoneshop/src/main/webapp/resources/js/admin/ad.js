@@ -29,7 +29,7 @@ ad=(()=>{
 	};
 	let admin=()=>{
 		$('#maincontent').html(compo.login_in());
-		$('#maincontent').empty();
+		$('.row').empty();
 		$('#loginbtn').html('<a href="#"><span id="loging_glyphicon" class="glyphicon glyphicon-off"></span> LogOut</a>')
 		.click(()=>{
 			$('#loginbtn').html('<a href="#"><span id="loging_glyphicon" class="glyphicon glyphicon-log-in"></span> Login</a>');
@@ -73,6 +73,7 @@ ad=(()=>{
 		alert('관리자 회권관리 접근');
 	};
 	let call =()=>{
+		$('container').empty();
 		alert('관리자 핸드폰등록 접근');
 	};
 	return {init:init,admin:admin,buy:buy,member:member,call:call};
