@@ -39,7 +39,7 @@
   </div>
 </nav>
 
-<div class="container">
+<div id="shop-container" class="container">
   <h2>핸드폰 샵</h2>  
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->

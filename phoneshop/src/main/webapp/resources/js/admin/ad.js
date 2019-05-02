@@ -73,7 +73,18 @@ ad=(()=>{
 		alert('관리자 회권관리 접근');
 	};
 	let call =()=>{
-		$('container').empty();
+		$('#shop-container').empty();
+		$('<h2 class="h">핸드폰  등록</h2>')
+		.css('margin','0 auto')	
+		.appendTo('#shop-container')
+			
+		
+		;
+		$('<div class="col-sm-3">'
+				+'<h3 style="color:blue;"><u>핸드폰 사진 등록</u></h3>'
+				+'<img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">'
+				+'<bttun'
+				+'</div>').appendTo('.row');
 		alert('관리자 핸드폰등록 접근');
 	};
 	return {init:init,admin:admin,buy:buy,member:member,call:call};
