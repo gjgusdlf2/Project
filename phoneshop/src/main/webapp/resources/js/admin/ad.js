@@ -9,6 +9,7 @@ ad=(()=>{
 		phonejs = js+'/phone/phone.js';
 		prdjs = js+'/prd/prd.js';
 		adjs = js+'/admin/ad.js';
+		filejs = js+'/cmm/fileupload.js';
 	};
 	let onCreate=()=>{
 		setContentView();
@@ -121,14 +122,28 @@ ad=(()=>{
 		.css('float','left')
 		.css('margin-top','30px')
 		.appendTo('.row');
-		$('<div>색상</div>')
-		.css('width','150px')
+		$('<div">색상</div>')
+		.css('width','350px')
 		.css('height','65px')
 		.css('margin-top','15px')
 		.css('border','1px solid #444444')
 		.css('float','left')
-		.css('padding-top','15px')
-		.css('font-size','30px')
+		.css('padding-top','10px')
+		.css('font-size','40px')
+		.appendTo('.row');
+		$('<select name="colors">'
+				+'<option value="">-- 선택 색상--</option>'
+				+'<option value="black">미드나이트 블랙</option>'
+				+'<option value="gray">오키드 그레이</option>'
+				+'<option value="blue">코랄 블루</option>'
+				+'<option value="silver">아크릴 실버</option>'
+				+'<option value="gold">메이플 골드</option></select>')
+		.css('margin-top','15px')
+		.css('width','800px')
+		.css('height','65px')
+		.css('float','left')
+		.css('margin-left','192px')
+		.css('font-size','20px')
 		.appendTo('.row');
 	};
 	return {init:init,admin:admin,buy:buy,member:member,call:call};

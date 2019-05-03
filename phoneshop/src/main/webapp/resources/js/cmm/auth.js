@@ -9,6 +9,7 @@ auth=(()=>{
 		custjs = js+'/cust/cust.js';
 		prdjs = js+'/prd/prd.js';
 		adjs = js+'/admin/ad.js';
+		filejs = js+'/cmm/fileupload.js';
 		onCreate();
 	};
 	let onCreate=()=>{

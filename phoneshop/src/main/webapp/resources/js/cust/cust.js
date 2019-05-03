@@ -9,6 +9,7 @@ cust=(()=>{
 		phonejs=js+'/phone/phone.js';
 		prdjs = js+'/prd/prd.js';
 		adjs = js+'/admin/ad.js';
+		filejs = js+'/cmm/fileupload.js';
 	};
 	let onCreate=()=>{
 		setContentView();

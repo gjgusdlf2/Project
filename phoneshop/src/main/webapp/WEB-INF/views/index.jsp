@@ -108,6 +108,7 @@
 <script src="<%=application.getContextPath()%>/resources/js/cust/cust.js"></script>
 <script src="<%=application.getContextPath()%>/resources/js/router.js" ></script>
 <script src="<%=application.getContextPath()%>/resources/js/phone/phone.js"></script>
+<script src="<%=application.getContextPath()%>/resources/js/cmm/fileupload.js"></script>
 <script>
 app.init('<%=application.getContextPath()%>');
 </script>
