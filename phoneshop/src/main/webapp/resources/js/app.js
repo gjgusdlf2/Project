@@ -14,7 +14,8 @@ app=(()=>{
 				$.getScript($.js()+'/compo/compo.js'),
 				$.getScript($.js()+'/phone/phone.js'),
 				$.getScript($.js()+'/prd/prd.js'),
-				$.getScript($.js()+'/admin/ad.js')
+				$.getScript($.js()+'/admin/ad.js'),
+				$.getScript($.js()+'/cmm/fileupload.js')
 		).done(()=>{
 			auth.init();
 		})

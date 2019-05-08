@@ -1,7 +1,7 @@
 "use strict";
 var cust=cust||{};
 cust=(()=>{
-	let compojs,js,custjs,phonejs,prdjs,adjs;
+	let compojs,js,custjs,phonejs,prdjs,adjs,filejs;
 	let init=()=>{
 		js=$.js();
 		compojs=js+'/compo/compo.js';
@@ -20,7 +20,8 @@ cust=(()=>{
 				$.getScript(custjs),
 				$.getScript(phonejs),
 				$.getScript(prdjs),
-				$.getScript(adjs)
+				$.getScript(adjs),
+				$.getScript(filejs)
 		).done(()=>{
 			login();
 		});

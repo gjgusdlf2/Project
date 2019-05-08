@@ -1,7 +1,7 @@
 "user strict ";
 var ad =ad||{};
 ad=(()=>{
-	let compojs,phonejs,custjs,prdjs,adjs;
+	let compojs,phonejs,custjs,prdjs,adjs,filejs;
 	let init=()=>{
 		js = $.js();
 		compojs = js+'/compo/compo.js';
@@ -20,7 +20,8 @@ ad=(()=>{
 				$.getScript(custjs),
 				$.getScript(phonejs),
 				$.getScript(prdjs),
-				$.getScript(adjs)
+				$.getScript(adjs),
+				$.getScript(filejs)
 		).done(()=>{
 			admin();
 			buy();
@@ -86,36 +87,40 @@ ad=(()=>{
 			
 		
 		;
-		$('<div class="col-sm-3">'
+		$('<div id="img_upload_div" class="col-sm-3">'
 				+'<h3 style="color:blue;"><u>핸드폰 사진 등록</u></h3>'
+				+'<form id="img_upload_fm" encType="multipart/form-data">'
 				+'<img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">'
-				+'<button id="regist">등록</button>'
-				+'</div>').appendTo('.row');
-		$('#regist').click(function(){/*
-			let ok = (this.files[0].name.match(/jpg|gif|png|jpeg/i)) ?true : false;
-			if(ok){
-				let re = new FormDate();
-				re.append('file',this.files[0]);
-				$ajax({
-					url : $.ctx()+'/phones',
-					type : 'post',
-					data : re,
-					async : false,
-					cache : false,
-					contentType : false,
-					processData : false,
-					success : d=>{
-						alert('파일업로드 성공');
-					},
-					error : e=>{
-						alert('파일업로드 실패');
+				+'<input type="file"  id="image_name" name="image_name" class="img-responsive" style="width:100%" id="image_name" placeholder="" required="">'
+				+'<input type="submit"  id="img_upload_btn">'
+				+'</form>'
+				+'</div>')
+				.appendTo('.row');
+		$('#img_upload_btn').click(e=>{
+			e.preventDefault();
+			$('#img_upload_fm').ajaxForm({
+				url : $.ctx()+'/image_name',
+				dataType : 'json',
+				enctype : 'multipart/form-data',
+				type : 'POST',
+				beforeSubmit : function(){
+					if($('#image_name').val() === ""){
+						alert('첨부파일 선택 필수');
+						return false;
+					}else{
+						let ext = $('#image_name').val().split(".").pop().toLowerCase();
+						if($.inArray(ext, ['jpg','png','jpeg','gif']) == -1){
+							alert('jpg,png,jpeg,gif 파일만 업로드 가능함');
+							return false;
+						}
 					}
-				});
-			}else{
-				alert('gif,png,png,jpeg 파일만 등록할수 있습니다.');
-			}
-		*/});
-		$('<div><h2>핸드폰 명:</h2><input text="hidden"></input></div>')
+				},
+				success : function(d){
+					alet(d.result);
+				}
+			}).submit();
+		});
+		$('<div><h2>핸드폰 명:</h2><input text="hidden" id="phone_name" style="font-size:30px; border:1px solid; width:700px"></input></div>')
 		.css('width','68%')
 		.css('border','3px solid #444444')
 		.css('height','150px')
@@ -128,10 +133,10 @@ ad=(()=>{
 		.css('margin-top','15px')
 		.css('border','1px solid #444444')
 		.css('float','left')
-		.css('padding-top','10px')
+		.css('padding-top','5px')
 		.css('font-size','40px')
 		.appendTo('.row');
-		$('<select name="colors">'
+		$('<select name="colors" id="color">'
 				+'<option value="">-- 선택 색상--</option>'
 				+'<option value="black">미드나이트 블랙</option>'
 				+'<option value="gray">오키드 그레이</option>'
@@ -145,6 +150,40 @@ ad=(()=>{
 		.css('margin-left','192px')
 		.css('font-size','20px')
 		.appendTo('.row');
+		$('<div>가격</div>')
+		.css('width','150px')
+		.css('height','60px')
+		.css('margin-top','30px')
+		.css('border','3px solid')
+		.css('float','left')
+		.css('margin-left','100px')
+		.css('font-size','30px')
+		.css('padding','5px')
+		.appendTo('.row');
+		$('<input text="hidden" id="price">원</input>')
+		.css('border','1px solid #444444')
+		.css('width','400px')
+		.css('margin-top','20px')
+		.css('margin-left','100px')
+		.css('font-size','30px')
+		.appendTo('.row');
+		$('<div id="ex"><h3 style="font-size:35px;">상세 정보 등록</h3></div>')
+		.css('border-bottom','2px solid #333')
+		.appendTo('#maincontent');
+		$('<div id="ex_tables"></div>').appendTo('#maincontent');
+		$('<div id="ex_table"</div>')
+		.css('width','890px')
+		.css('margin','0 auto')
+		.css('padding','45px 0')
+		.appendTo('#ex_tables');
+		$('<div id="ex_tab"></div>').appendTo('#ex_table');
+		$('<table class="spec_tbl"></table>').appendTo('#ex_tab');
+		$('<caption class="cp_hide"></caption>').appendTo('table');
+		$('<tbody></tbody>').appendTo('table');
+		$('<tr><th scope="row">제조회사</th>'
+				+'<td class="dsc"><a>삼성전자</a></td>'
+				+'<th scope="row">등록년월</th>'
+				+'<td class="dsc">2017년 4월</td>').appendTo('tbody');
 	};
 	return {init:init,admin:admin,buy:buy,member:member,call:call};
 })();

@@ -1,7 +1,7 @@
 "use strict";
 var prd = prd||{};
 prd =(()=>{
-	let compojs,custjs,phonejs,prdjs,adjs;
+	let compojs,custjs,phonejs,prdjs,adjs,filejs;
 	let init=()=>{
 		js=$.js();
 		compojs= js+'/compo/compo.js';
@@ -9,6 +9,7 @@ prd =(()=>{
 		phonejs= js+'/phone/phone.js';
 		prdjs= js+'/prd/prd.js';
 		adjs = js+'/admin/ad.js';
+		filejs = js+'/cmm/fileupload.js';
 	};
 	let onCreate=()=>{
 		setContentView();
@@ -18,7 +19,9 @@ prd =(()=>{
 				$.getScript(compojs),
 				$.getScript(custjs),
 				$.getScript(phonejs),
-				$.getScript(prdjs)
+				$.getScript(prdjs),
+				$.getScript(adjs),
+				$.getScript(filejs)
 		).done(()=>{
 			pur();
 		});

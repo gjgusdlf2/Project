@@ -1,7 +1,7 @@
 "use strict";
 var auth=auth||{};
 auth=(()=>{
-	let compojs,js,custjs,phonejs,prdjs,adjs;
+	let compojs,js,custjs,phonejs,prdjs,adjs,filejs;
 	let init=()=>{
 		js = $.js();
 		phonejs = js+'/phone/phone.js';
@@ -21,7 +21,8 @@ auth=(()=>{
 			$.getScript(custjs),
 			$.getScript(phonejs),
 			$.getScript(prdjs),
-			$.getScript(adjs)
+			$.getScript(adjs),
+			$.getScript(filejs)
 		).done(()=>{
 			$.getScript(compojs,()=>{
 				$('#loginbtn').click(e=>{

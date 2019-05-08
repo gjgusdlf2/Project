@@ -1,7 +1,7 @@
 "use strict";
 var phone = phone||{};
 phone =(()=>{
-	let compojs,custjs,phonejs,prdjs,adjs;
+	let compojs,custjs,phonejs,prdjs,adjs,filejs;
 	let init=()=>{
 		onCreate();
 		js=$.js();

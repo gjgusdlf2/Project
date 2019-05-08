@@ -46,8 +46,7 @@ compo={
 			+'    <div class="col">'
 			+'      <a href="#" style="color:white" class="btn">아이디/비번찾기</a>'
 			+'    </div>'
-			+'  </div>'
-			+'</div>';
+			+'  </div>';
 		},
 		login_in : ()=>{
 			return '<div id="maincontent" class="container-fluid bg-3 text-center">    '
@@ -69,9 +68,7 @@ compo={
 			+'      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">'
 			+'    </div>'
 			+'  </div>'
-			+'</div><br>'
-
-			+'<br><br>';
+			+'</div><br>';
 		},
 		join_in : ()=>{
 			return '<h2>Responsive Checkout Form</h2>'
@@ -152,5 +149,25 @@ compo={
 			+'    </div>'
 			+'  </div>'
 			+'</div>';
+		},
+		img_upload : ()=>{
+			return  '<div id="img_upload_div" class="col-md-5  mb-5">'
+            +'<form id="img_upload_frm"  encType="multipart/form-data">'
+            +'<label for="cc-expiration">이미지  등록(파일 업로드)</label>'
+            +'<input type="file" id="photo"  name="photo" class="form-control" id="photo" placeholder=""  required="">'
+            +'<div class="invalid-feedback">'
+            +'</div>'
+            +'<input type="submit"  id="img_upload_btn">'
+            +'</form>'
+          +'</div>'
+          +'<div class="col-md-5 mb-5">'
+            +'<form id="img_drag_frm"   encType="multipart/form-data">'
+            +'<label for="cc-cvv">이미지  등록(드레그&드랍)</label>'
+            +'<input type="file" class="form-control"  id="cc-cvv" placeholder="" required="">'
+            +'<div class="invalid-feedback">'
+            +'</div>'
+            +'<input type="submit" id="img_drag_btn">'
+            +'</form>'
+          +'</div>';
 		}
 }
