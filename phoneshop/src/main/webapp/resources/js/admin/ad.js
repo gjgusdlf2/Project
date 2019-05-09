@@ -120,7 +120,7 @@ ad=(()=>{
 				}
 			}).submit();
 		});
-		$('<div><h2>핸드폰 명:</h2><input text="hidden" id="phone_name" style="font-size:30px; border:1px solid; width:700px"></input></div>')
+		$('<div><h2>핸드폰 명:</h2><input text="hidden" id="phone_name" style="font-size:30px; border:1px solid; width:700px; text-align:center;"></input></div>')
 		.css('width','68%')
 		.css('border','3px solid #444444')
 		.css('height','150px')
@@ -166,24 +166,149 @@ ad=(()=>{
 		.css('margin-top','20px')
 		.css('margin-left','100px')
 		.css('font-size','30px')
+		.css('text-align','right')
 		.appendTo('.row');
 		$('<div id="ex"><h3 style="font-size:35px;">상세 정보 등록</h3></div>')
 		.css('border-bottom','2px solid #333')
 		.appendTo('#maincontent');
 		$('<div id="ex_tables"></div>').appendTo('#maincontent');
-		$('<div id="ex_table"</div>')
-		.css('width','890px')
-		.css('margin','0 auto')
-		.css('padding','45px 0')
+		$('<div class="detail_cont"></div>')
 		.appendTo('#ex_tables');
-		$('<div id="ex_tab"></div>').appendTo('#ex_table');
+		$('<div id="ex_tab"></div>').appendTo('.detail_cont');
 		$('<table class="spec_tbl"></table>').appendTo('#ex_tab');
 		$('<caption class="cp_hide"></caption>').appendTo('table');
 		$('<tbody></tbody>').appendTo('table');
-		$('<tr><th scope="row">제조회사</th>'
-				+'<td class="dsc"><a>삼성전자</a></td>'
+		$('<tr><th scope="row" class="tit">제조회사</th>'
+				+'<td class="dsc"><input text="hidden"></input></td>'
 				+'<th scope="row">등록년월</th>'
-				+'<td class="dsc">2017년 4월</td>').appendTo('tbody');
+				+'<td class="dsc"><input text="hidden"></input></td></tr>'
+				+'<tr><th scope="row"><a>운영체제</a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td>'
+				+'<th scope="row" class="tit"><a>판매방식</a></th>'
+				+'<td scope="row" class="tit"><input text="hidden"></input></td><\tr>'
+				+'<tr><th scope="row" colspan="4">디스플레이</th></tr>'
+				+'<tr><th scope="row" class="tit"><a>디자인</a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td>'
+				+'<th scope="row" class="tit"><a>화면크기(인치)</a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td></tr>'
+				+'<tr><th scope="row" class="tit"><a>패널종류</a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td>'
+				+'<th scope="row" class="tit"><a>화면해상도</a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td></tr>'
+				+'<tr><th scope="row" class="tit"><a>ppi</a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td>'
+				+'<th scope="row" class="tit"><a>화면비</a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td></tr>'
+				+'<tr><th scope="row" class="tit"><a>화면면적</a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td>'
+				+'<th scope="row" class="tit"><a>HDR규격</a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td></tr>'
+				+'<tr><th scope="row" colspan="4">시스템</th></tr>'
+				+'<tr><th scope="row" class="tit"><a>AP종류</a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td>'
+				+'<th scope="row" class="tit"><a>코어갯수</a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td></tr>'
+				+'<tr><th scope="row" class="tit"><a>코어클럭</a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td>'
+				+'<th scope="row" class="tit"><a>그래픽코어</a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td></tr>'
+				+'<tr><th scope="row" class="tit"><a>시스템램</a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td>'
+				+'<th scope="row" class="tit"><a>내장메모리</a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td></tr>'
+				+'<tr><th scope="row" class="tit"><a>저장장치</a></th>'
+				+'<td calss="dsc"><input text="hidden"></input></td>'
+				+'<th scope="row" class="tit"><a>외장메모리</a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td></tr>'
+				+'<tr><th scope="row" colspan="4">네트워크/규격</th></tr>'
+				+'<tr><th scope="row" class="tit"><a>LTE통신규격</a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td>'
+				+'<th scope="row" class="dsc"><a>WiFi주파수</a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td>'
+				+'<tr><th scope="row" class="tit"><a>WiFi다이렉트</a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td>'
+				+'<th scope="row" class="tit"><a>블루투스</a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td></tr>'
+				+'<tr><th scope="row" class="tit"><a>유심타입</a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td>'
+				+'<th scope="row"><a>듀얼유심</a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td></tr>'
+				+'<tr><th scope="row" colspan="4">카메라</th></tr>'
+				+'<tr><th scope="row" class="tit"><a>카메라 타입</a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td>'
+				+'<th scope="row" class="tit"><a>후면카메라</a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td></tr>'
+				+'<tr><th scope="row" class="tit"><a>전면카메라</a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td>'
+				+'<th scope="row" class="tit"><a>동영상촬영</a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td></tr>'
+				+'<tr><th scope="row" class="tit"><a>조리개값</a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td>'
+				+'<th scope="row" class="tit"><a>손떨림보정</a></th>'
+				+'<td class="dsc"><input text="hidden"></input></th></tr>'
+				+'<tr><th scope="row" class="tit"><a>HDR지원</a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td>'
+				+'<th scope="row" class="tit"><a>카메라플레시</a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td></tr>'
+				+'<tr><th scope="row" colspan="4">사운드</th></tr>'
+				+'<tr><th scope="row" class="tit"><a>이어폰단자</a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td>'
+				+'<th scope="row" class="tit"><a>스피커</a></th>'
+				+'<td class="row"><input text="hidden"></input></td></tr>'
+				+'<tr><th scope="row" class="tit"><a>고음질재생</a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td>'
+				+'<th scope="row" class="tit"><a>사운드 기술</a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td></tr>'
+				+'<tr><th scope="row" colspan="4">보안기능</th></tr>'
+				+'<tr><th scope="row" class="tit"><a>지문인식</a>'
+				+'<td class="dsc"><input text="hidden"></input></td>'
+				+'<th scope="row" class="tit"><a>홍채인식</a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td></tr>'
+				+'<tr><th scope="row" class="tit"><a>얼굴인식</a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td>'
+				+'<th scope="row" class="tit"><a>음성잠금해제</a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td></tr>'
+				+'<tr><th scope="row" colspan="4">주요기능</th>'
+				+'<tr><th scope="row" class="tit"><a>AI/인공지능</a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td>'
+				+'<th scope="row" class="tit"><a>NFC</a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td></tr>'
+				+'<tr><th scope="row" class="tit"><a>전자결제</a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td>'
+				+'<th scope="row" class="tit"><a>지상파DMB</a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td></tr>'
+				+'<tr><th scope="row" class="tit"><a>홈버튼</a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td>'
+				+'<th scope="row" class="tit"><a>터치펜</a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td></tr>'
+				+'<tr><th scope="row" class="tit"><a>방수/방진</a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td>'
+				+'<th scope="row" class="tit"><a></a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td></tr>'
+				+'<tr><th scope="row" colspan="4">배터리</th></tr>'
+				+'<tr><th scope="row" class="tit"><a>배터리용량</a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td>'
+				+'<th scope="row" class="tit"><a>배터리장착방식</a></th>'
+				+'<th class="dsc"><input text="hidden"></input></td></tr>'
+				+'<tr><th scope="row" class="tit"><a>고속충전</a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td>'
+				+'<th scope="row" class="tit"><a>충전단자</a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td></tr>'
+				+'<tr><th scope="row" class="tit"><a>무선충전</a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td>'
+				+'<th scope="row" class="tit"><a></a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td></tr>'
+				+'<tr><th scope="row" colspan="4">크기/무게</th></tr>'
+				+'<tr><th scope="row" class="tit"><a>세로</a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td>'
+				+'<th scope="row" class="tit"><a>가로</a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td></tr>'
+				+'<tr><th scope="row" class="tit"><a>두께</a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td>'
+				+'<th scope="row" class="tit"><a>무게</a></th>'
+				+'<td class="dsc"><input text="hidden"></input></td></tr></tbody></table>').appendTo('tbody');
+		/*$('<div class="mid_banner"></div>').appendTo('.detail_cont');*/
+		
 	};
 	return {init:init,admin:admin,buy:buy,member:member,call:call};
 })();

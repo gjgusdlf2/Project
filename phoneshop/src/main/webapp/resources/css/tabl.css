@@ -1,17 +1,47 @@
 @charset "UTF-8";
-<style>
+
+
+.detail_cont {
+    width: 890px;
+    margin: 0 auto;
+    padding: 45px 0;
+}
+
+
+.spec_tbl {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #e2e2e2;
+}
+
+.spec_tbl col.tit {
+    width: 16%;
+}
+
+.spec_tbl col.dsc {
+    width: 34%;
+}
+
 .spec_tbl th {
     min-height: 18px;
     padding: 10px 12px;
     background: #fbfbfb;
     border-bottom: 1px solid #e2e2e2;
     border-left: 1px solid #e2e2e2;
-    font-size: 13px;
+    font-size: 15px;
     color: #666;
     text-align: left;
     font-weight: normal;
     font-family: "Malgun Gothic","맑은 고딕";
 }
+
+.spec_tbl th[colspan] {
+    background: #fff;
+    color: #000;
+    font-weight: bold;
+}
+
 .spec_tbl td {
     padding: 8px 12px;
     line-height: 18px;
@@ -20,10 +50,32 @@
     border-width: 0 0 1px 1px;
     border-color: #e2e2e2;
 }
-.cp_hide {
-    width: 1px;
-    height: 1px;
-    text-indent: -9999px;
-    background: #fff;
+
+.spec_tbl a {
+    color: #666;
 }
-</style>
+.spec_tbl input {
+    color: #666;
+    text-align: center;
+}
+
+
+.spec_tbl .maker_link {
+    text-decoration: none;
+}
+.spec_tbl .btn_certi {
+    display: inline-block;
+    padding: 0 4px;
+    height: 16px;
+    line-height: 16px;
+    border: 1px solid #dedede;
+    font-size: 11px;
+    color: #919191;
+    text-decoration: none;
+}
+
+
+.mid_banner {
+	margin:20px 0;
+	width:890px;
+}
