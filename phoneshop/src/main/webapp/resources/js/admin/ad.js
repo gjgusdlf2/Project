@@ -91,7 +91,7 @@ ad=(()=>{
 				+'<h3 style="color:blue;"><u>핸드폰 사진 등록</u></h3>'
 				+'<form id="img_upload_fm" encType="multipart/form-data">'
 				+'<img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">'
-				+'<input type="file"  id="image_name" name="image_name" class="img-responsive" style="width:100%" id="image_name" placeholder="" required="">'
+				+'<input type="file"  id="imageName" name="imageName" class="img-responsive" style="width:100%"  placeholder="" required="">'
 				+'<input type="submit"  id="img_upload_btn">'
 				+'</form>'
 				+'</div>')
@@ -99,16 +99,16 @@ ad=(()=>{
 		$('#img_upload_btn').click(e=>{
 			e.preventDefault();
 			$('#img_upload_fm').ajaxForm({
-				url : $.ctx()+'/image_name',
+				url : $.ctx()+'/imageName',
 				dataType : 'json',
 				enctype : 'multipart/form-data',
 				type : 'POST',
 				beforeSubmit : function(){
-					if($('#image_name').val() === ""){
+					if($('#imageName').val() === ""){
 						alert('첨부파일 선택 필수');
 						return false;
 					}else{
-						let ext = $('#image_name').val().split(".").pop().toLowerCase();
+						let ext = $('#imageName').val().split(".").pop().toLowerCase();
 						if($.inArray(ext, ['jpg','png','jpeg','gif']) == -1){
 							alert('jpg,png,jpeg,gif 파일만 업로드 가능함');
 							return false;
@@ -307,8 +307,35 @@ ad=(()=>{
 				+'<td class="dsc"><input text="hidden"></input></td>'
 				+'<th scope="row" class="tit"><a>무게</a></th>'
 				+'<td class="dsc"><input text="hidden"></input></td></tr></tbody></table>').appendTo('tbody');
-		/*$('<div class="mid_banner"></div>').appendTo('.detail_cont');*/
-		
+		$('<div id="descript" class="col-sm-3">'
+				+'<form id="img_descript_fm" encType="multipart/form-data">'
+				+'<input type="file" id="descriptName" name="descriptName" class="form-control" placeholder="" required="">'
+				+'<input type="submit" id="descript_upload_btn">'
+				+'</form>').appendTo('#ex_tab');
+		$('#descript_upload_btn').click(e=>{
+			e.preventDefault();
+			$('#img_descript_fm').ajaxForm({
+				url : $.ctx()+'/descriptName',
+				dataType : 'json',
+				enctype : 'multipart/form-data',
+				type : 'POST',
+				beforeSubmit : function(){
+					if($('#descriptName').val() === ""){
+						alert("첨부파일 선택 필수");
+						return false;
+					}else{
+						let ext = $("#descriptName").val().split(".").pop().toLowerCase();
+						if($.inArray(ext, ['jpg','png','jpeg','gif']) ==- 1){
+							alert('jpg,png,jpeg,gif 파일만 업로드 가능함');
+							return false;
+						}
+					}
+				},
+				success : function(d){
+					alert(d.result);
+				}
+			}).submit();
+		});
 	};
 	return {init:init,admin:admin,buy:buy,member:member,call:call};
 })();

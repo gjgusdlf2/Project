@@ -24,7 +24,8 @@ public class ImageCtr {
 @Autowired ImageServiceImpl service;
 @Autowired ImageMapper imgMap;
 @Autowired Map<String,Object> map;
-	@PostMapping("/image_name")
+
+	@PostMapping("/imageName")
 		public Map<String,Object> fileUpload(
 				MultipartHttpServletRequest request)throws Exception{
 		logger.info("========fileUpload(){}=======","ENTER");

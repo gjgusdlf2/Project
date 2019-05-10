@@ -74,6 +74,11 @@
     text-decoration: none;
 }
 
+#descript{
+    margin: 0 auto;
+    text-align: center;
+}
+
 
 .mid_banner {
 	margin:20px 0;
