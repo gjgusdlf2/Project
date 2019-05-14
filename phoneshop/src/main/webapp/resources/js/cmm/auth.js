@@ -41,11 +41,11 @@ auth=(()=>{
 			$('#navl').empty();
 			$('.row').empty();
 			let arr=[{
-				txt : '삼성 갤럭시 S8 S8+', name : 's8'
+				txt : '삼성 갤럭시 S8', name : 's8'
 			},{
 				txt : '삼성 갤럭시 노트8', name : 'note8'
 			},{
-				txt : '삼성 갤럭시 S9 S9+', name : 's9'
+				txt : '삼성 갤럭시 S9', name : 's9'
 			},{
 				txt : '삼성 갤럭시 노트9', name : 'note9'
 			},{

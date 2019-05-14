@@ -31,11 +31,11 @@ phone =(()=>{
 	};
 		let galaxys8=()=>{
 			$('#maincontent').empty();
-			$('.container').html('<h2>갤럭시 s8 s8+</h2>'
+			$('.container').html('<h2>갤럭시 s8</h2>'
 					+'<div class="clearfix">'
 					+'<div class="box1">'
 					+'<img src="resources/img/s8.jpg" style="width:100%;"></div>'
-					+'<div class="box2" style="margin-left:50px; float:left; width:50%; height=:300px;"><h2>s8</h2></div><h2>s8+<h/2></div>');
+					+'<div class="box2" style="margin-left:50px; float:left; width:50%; height=:300px;"><h2>s8</h2></div></div>');
 			$.getJSON($.ctx()+'/products/price',d=>{
 				$.each(d.list,(i,j)=>{
 					$('<a>'+j.price+'원'+'</a><br>')

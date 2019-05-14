@@ -5,6 +5,6 @@ import org.springframework.stereotype.Component;
 import lombok.Data;
 
 @Data @Component
-public class OrderesDTO {
+public class OrdereDTO {
 	private String phoneID,supplierID;
 }

@@ -6,32 +6,32 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.phoneshop.web.domain.OrderesDTO;
-import com.phoneshop.web.mapper.OrderesMapper;
+import com.phoneshop.web.domain.OrdereDTO;
+import com.phoneshop.web.mapper.OrdereMapper;
 
 @Service
-public class OrderesServiceImpl implements OrderesService{
-	@Autowired OrderesMapper ordesmap;
+public class OrdereServiceImpl implements OrdereService{
+	@Autowired OrdereMapper ordesmap;
 	@Override
-	public void createShipper(OrderesDTO ordes) {
+	public void createShipper(OrdereDTO ordes) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public List<OrderesDTO> findAllShipper(HashMap<String, Object> map) {
+	public List<OrdereDTO> findAllShipper(HashMap<String, Object> map) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<OrderesDTO> findSomeShippers(HashMap<String, Object> map) {
+	public List<OrdereDTO> findSomeShippers(HashMap<String, Object> map) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public OrderesDTO findOneShipper(OrderesDTO ordes) {
+	public OrdereDTO findOneShipper(OrdereDTO ordes) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -43,13 +43,13 @@ public class OrderesServiceImpl implements OrderesService{
 	}
 
 	@Override
-	public void uploadShipper(OrderesDTO ordes) {
+	public void uploadShipper(OrdereDTO ordes) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void removeShipper(OrderesDTO ordes) {
+	public void removeShipper(OrdereDTO ordes) {
 		// TODO Auto-generated method stub
 		
 	}

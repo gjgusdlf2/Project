@@ -73,7 +73,10 @@ ad=(()=>{
 		alert('관리자 구매관리 접근');
 	};
 	let member =()=>{
-		alert('관리자 회권관리 접근');
+		$('#shop-container').empty();
+		$('h2 class="h">회원관리</h2>')
+		.css('margin','0 auto')
+		.appendTo('#shop-container');
 	};
 	let call =()=>{
 		$('#loginbtn').click(e=>{
@@ -335,6 +338,11 @@ ad=(()=>{
 					alert(d.result);
 				}
 			}).submit();
+		});
+		$('<div id="last_btn"><a class="ok_btn">핸드폰 등록하기</a>')
+		.appendTo('.detail_cont');
+		$('#last_btn').click(e=>{
+			alert('버튼클릭');
 		});
 	};
 	return {init:init,admin:admin,buy:buy,member:member,call:call};
