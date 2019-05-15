@@ -74,14 +74,20 @@ ad=(()=>{
 	};
 	let member =()=>{
 		$('#shop-container').empty();
-		$('h2 class="h">회원관리</h2>')
+		$('<h2 class="h">회원관리</h2>')
 		.css('margin','0 auto')
 		.appendTo('#shop-container');
+		$('<div id="mem"><table class="memberid"><tbody><tr><th><u>계정<u></th>'
+				+'<th><u>탈퇴<u></th></tr>').appendTo('.row');
 	};
 	let call =()=>{
-		$('#loginbtn').click(e=>{
+/*		$('#loginbtn').click(e=>{
 			$('shop-container').empty();
 			alert('핸드폰 등록에서 로그아웃');
+		});*/
+		$('#member').click(()=>{
+			$('#maincontent').empty();
+			coll();
 		});
 		$('#shop-container').empty();
 		$('<h2 class="h">핸드폰  등록</h2>')
@@ -343,6 +349,7 @@ ad=(()=>{
 		.appendTo('.detail_cont');
 		$('#last_btn').click(e=>{
 			alert('버튼클릭');
+			auth();
 		});
 	};
 	return {init:init,admin:admin,buy:buy,member:member,call:call};
