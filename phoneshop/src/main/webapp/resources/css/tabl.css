@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-
 .detail_cont {
     width: 890px;
     margin: 0 auto;
@@ -22,6 +21,17 @@
 .spec_tbl col.dsc {
     width: 34%;
 }
+.tables {
+  width: 100%;
+  padding: 8px;
+  font-size : 30px;
+  margin-top : 30px;
+}
+
+.tables th, td {
+  text-align: center;
+}
+
 
 .spec_tbl th {
     min-height: 18px;
@@ -97,5 +107,6 @@
     font-family: "Malgun Gothic","맑은 고딕";
     margin-top: 100px;
     margin-right: 150px;
-    cursor:pointer;
+    cursor:pointer;s
 }
+
