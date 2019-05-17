@@ -77,11 +77,17 @@ ad=(()=>{
 		$('<h2 class="h">회원관리</h2>')
 		.css('margin','0 auto')
 		.appendTo('#shop-container');
-		$('<div id="member_tab"><table id="tab" class="tables"><tr><th><u>계정</u></th>'
-				+'<th><u>탈퇴</u></th></tr></table>').appendTo('.row');
-		$.each([d],(i,j)=>{
-			$('<tr>'+j.customerID+'</tr>').appendTO('#tab');
-		});
+		$.getJSON($.ctx()+'/customer/page/'+x,d=>{
+			$('<div id="member_tab"><table id="tab" class="tables"><tr><th><u>계정</u></th>'
+					+'<th><u>이름</u></th>'
+					+'<th><u>핸드폰번호</u></th>'
+					+'<th><u>탈퇴</u></th></tr></table>').appendTo('.row');
+			$.each(d,(i,j)=>{
+				$('<tr>'+j.customerID+'</tr>'
+						+'<tr>'+j.customerName+'</tr>'
+						+'<tr>'+j.phone+'</tr>').appendTO('#tab');
+			});
+		})
 	};
 	let call =()=>{
 /*		$('#loginbtn').click(e=>{

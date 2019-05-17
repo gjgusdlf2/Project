@@ -17,7 +17,17 @@ SELECT
 	POSITION
 FROM CUSTOMERS
 WHERE CUSTOMER_ID LIKE #{customerID}
+</select>
 
+<select id="selectCustomers" resultType="com.phoneshop.web.domin.CustomerDTO"
+	parameterType="com.phoneshop.web.cmm.Proxy">
+	SELECT CUSTOMER_ID customerID,
+			CUSTOMER_NAME customerName,
+			PHONE phones
+	FROM CUSTOMERS
+	WHERE CUSTOMER_ID NOT LIKE "ha"
+	ORDER BY CUSTOMER_ID DESC
+	LIMIT {startRow},{pageSize};
 </select>
 <insert id="insertCustomer"
 		parameterType="com.phoneshop.web.domain.CustomerDTO"
