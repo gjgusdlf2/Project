@@ -45,6 +45,7 @@ public class CustomerCtr {
 		map.put("page_num", page);
 		map.put("page_size", "10");
 		map.put("block_size", "5");
+		custMap.selectCustomers(pxy);
 		return map;
 		
 	}

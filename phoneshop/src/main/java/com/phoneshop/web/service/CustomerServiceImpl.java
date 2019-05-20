@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.phoneshop.web.cmm.Proxy;
 import com.phoneshop.web.domain.CustomerDTO;
 import com.phoneshop.web.mapper.CustomerMapper;
 
@@ -26,9 +27,8 @@ public class CustomerServiceImpl implements CustomerService{
 	}
 
 	@Override
-	public List<CustomerDTO> findSomeCustomers(HashMap<String, Object> map) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<CustomerDTO> findSomeCustomers(Proxy pxy) {
+		return custmap.selectCustomers(pxy);
 	}
 
 	@Override

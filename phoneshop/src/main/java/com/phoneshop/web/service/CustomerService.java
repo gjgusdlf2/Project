@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Component;
 
+import com.phoneshop.web.cmm.Proxy;
 import com.phoneshop.web.domain.CustomerDTO;
 
 
@@ -13,7 +14,7 @@ import com.phoneshop.web.domain.CustomerDTO;
 public interface CustomerService {
 	public void createCustomer(CustomerDTO cust);
 	public List<CustomerDTO> findAllCustomer(HashMap<String,Object> map);
-	public List<CustomerDTO> findSomeCustomers(HashMap<String,Object> map);
+	public List<CustomerDTO> findSomeCustomers(Proxy pxy);
 	public CustomerDTO findOneCustomer(CustomerDTO cust);
 	public int countCustomers();
 	public void uploadCustomer(CustomerDTO cust);
