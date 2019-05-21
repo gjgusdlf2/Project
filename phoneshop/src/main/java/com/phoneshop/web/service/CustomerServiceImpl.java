@@ -38,8 +38,7 @@ public class CustomerServiceImpl implements CustomerService{
 
 	@Override
 	public int countCustomers() {
-		// TODO Auto-generated method stub
-		return 0;
+		return custmap.countAllCustomers();
 	}
 
 	@Override

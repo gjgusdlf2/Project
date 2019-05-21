@@ -60,7 +60,7 @@ ad=(()=>{
 					buy();
 					break;
 				case 'member' :
-					member();
+					member(1);
 					break;
 				case 'call' :
 					call();
@@ -72,17 +72,17 @@ ad=(()=>{
 	let buy =()=>{
 		alert('관리자 구매관리 접근');
 	};
-	let member =()=>{
+	let member =x=>{
 		$('#shop-container').empty();
 		$('<h2 class="h">회원관리</h2>')
 		.css('margin','0 auto')
 		.appendTo('#shop-container');
-		$.getJSON($.ctx()+'/customer/page/'+x,d=>{
+		$.getJSON($.ctx()+'/customers/page/'+x, d=>{
 			$('<div id="member_tab"><table id="tab" class="tables"><tr><th><u>계정</u></th>'
 					+'<th><u>이름</u></th>'
 					+'<th><u>핸드폰번호</u></th>'
 					+'<th><u>탈퇴</u></th></tr></table>').appendTo('.row');
-			$.each(d,(i,j)=>{
+			$.each(d.ls,(i,j)=>{
 				$('<tr>'+j.customerID+'</tr>'
 						+'<tr>'+j.customerName+'</tr>'
 						+'<tr>'+j.phone+'</tr>').appendTO('#tab');

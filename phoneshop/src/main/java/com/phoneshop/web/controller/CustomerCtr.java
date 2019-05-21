@@ -1,5 +1,6 @@
 package com.phoneshop.web.controller;
 
+import java.util.List;
 import java.util.Map;
 
 import org.slf4j.Logger;
@@ -40,13 +41,21 @@ public class CustomerCtr {
 	public Map<?,?> list(
 			@PathVariable String page){
 		logger.info("====== cust list 진입========");
-		
 		map.clear();
 		map.put("page_num", page);
 		map.put("page_size", "10");
 		map.put("block_size", "5");
-		custMap.selectCustomers(pxy);
+		System.out.println("시작값 :"+pxy.getStartRow());
+		System.out.println("마지막값 :"+pxy.getEndRow());
+		int totalcount = service.countCustomers();
+		map.put("total_cont", totalcount);
+		pxy.carryOut(map);
+		List<CustomerDTO> ls = service.findSomeCustomers(pxy);
+		System.out.println("리스트에 들어가는 데이터 :"+ls);
+		map.clear();
+		map.put("ls", ls);
 		return map;
+		
 		
 	}
 
