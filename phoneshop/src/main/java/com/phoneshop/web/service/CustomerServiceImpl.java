@@ -28,6 +28,7 @@ public class CustomerServiceImpl implements CustomerService{
 
 	@Override
 	public List<CustomerDTO> findSomeCustomers(Proxy pxy) {
+		System.out.println("서비스에서 본 리스트: "+custmap.selectCustomers(pxy));
 		return custmap.selectCustomers(pxy);
 	}
 

@@ -31,7 +31,6 @@ cust=(()=>{
 			$(compo.cust_login()).appendTo('#maincontent');
 			$('input[type=submit]').click(e=>{
 				e.preventDefault();
-				alert('로그인 들어가기');
 				let data={
 						customerID : $('input[name=customerID]').val()
 				};
@@ -45,7 +44,6 @@ cust=(()=>{
 					success : d=>{
 						if(d.customerID!==''){
 							if(d.customerID!=='ha'){
-								alert('로그인 성공'+d.customerID);
 								$('#maincontent').html(compo.login_in());
 								$('#loginbtn')
 									.html('<a href="#"><span id="loging_glyphicon" class="glyphicon glyphicon-off"></span> LogOut</a>')

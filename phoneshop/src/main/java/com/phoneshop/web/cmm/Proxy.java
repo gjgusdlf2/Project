@@ -9,13 +9,13 @@ import lombok.Data;
 
 @Data @Component @Lazy
 public class Proxy {
-	private int pageNum,pageSize,blockSize,startRow,
+	private int pageNum,pageSize,blockSize,startRow, pageCount,
 			endRow,startPage,endPage,prevBlock,nextBlock,totalCount;
 	private String search;
 	private boolean existPrev, existNext;
 	
 	public void carryOut(Map<?,?> paramMap) {
-		int pageNum;
+	
 		String _pageNum = (String)paramMap.get("page_num");
 		if(_pageNum == null) {
 			pageNum = 1;
@@ -23,7 +23,7 @@ public class Proxy {
 			pageNum = Integer.parseInt(_pageNum);
 		}
 		
-		int pageSize;
+	
 		String _pagesize = (String)paramMap.get("page_size");
 		if(_pagesize == null) {
 			pageSize = 10;
@@ -31,7 +31,7 @@ public class Proxy {
 			pageSize = Integer.parseInt(_pagesize);
 		}
 		
-		int blockSize;
+		
 		String _blocksize = (String)paramMap.get("block_size");
 			if(_blocksize == null) {
 					blockSize = 5;
@@ -41,14 +41,14 @@ public class Proxy {
 		
 		totalCount = (int)paramMap.get("total_count");
 		int nmg = totalCount % pageSize;
-		int pageCount;
+	
 			if(nmg == 0) {
 				pageCount = totalCount / pageSize;
 			}else {
 				pageCount = totalCount / pageSize + 1;
 			}
 		startRow = (pageNum -1) * pageSize;
-		int endRow;
+		
 			if(totalCount > pageNum * pageSize) {
 				endRow = pageNum * pageSize;
 				}else {
@@ -81,5 +81,7 @@ public class Proxy {
 		System.out.println("페이지카운트 :"+pageCount);
 		System.out.println("페이지넘 :"+pageNum);
 		System.out.println("블록사이즈 :"+blockSize);
+		System.out.println("페이지사이즈 :"+pageSize);
+		System.out.println("existPrev :"+existPrev);
 	}
 }

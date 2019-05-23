@@ -70,24 +70,68 @@ ad=(()=>{
 		});
 	};
 	let buy =()=>{
-		alert('관리자 구매관리 접근');
+		$('#shop-container').empty();
+		$('<h2 class="h">구매관리</h2>')
+		.css('margin','0 auto')
+		.appendTo('#shop-container');
+		$.getJSON($.ctx()+'/customers')
 	};
 	let member =x=>{
 		$('#shop-container').empty();
 		$('<h2 class="h">회원관리</h2>')
 		.css('margin','0 auto')
 		.appendTo('#shop-container');
+		$('.row').empty();
 		$.getJSON($.ctx()+'/customers/page/'+x, d=>{
 			$('<div id="member_tab"><table id="tab" class="tables"><tr><th><u>계정</u></th>'
 					+'<th><u>이름</u></th>'
 					+'<th><u>핸드폰번호</u></th>'
 					+'<th><u>탈퇴</u></th></tr></table>').appendTo('.row');
 			$.each(d.ls,(i,j)=>{
-				$('<tr>'+j.customerID+'</tr>'
-						+'<tr>'+j.customerName+'</tr>'
-						+'<tr>'+j.phone+'</tr>').appendTO('#tab');
+				$('<tr><th>'+j.customerID+'</th>'
+						+'<th>'+j.customerName+'</th>'
+						+'<th>'+j.phone+'</th></tr>').appendTo('#tab');
 			});
-		})
+			let pxy = d.pxy;
+			let ul = '<nav ari-label="Page navigation" style="width:400px;margin: 0 auto;"><ul id="ul" class="pagination"></ul></nav>';
+			$(ul)
+			.css('cursor','pointer')
+			.appendTo('#member_tab');
+			if(pxy.existPrev){
+				$('<li><a>&laquo;</a></li>')
+				.appendTo('#ul')
+				.click(function(){
+					member(pxy.prevBlock);
+				})
+			}
+			let i = 0;
+			for(i=pxy.startPage;i<=pxy.endPage;i++){
+				if(pxy.PageNum == i){
+					$('<li><a class="page active">'+i+'</a></li>')
+					.attr('href',$.ctx()+'/customers/page/'+i)
+					.appendTo('#ul')
+					.click(function(){
+						member($(this).text());
+						
+					});
+				}else{
+					$('<li><a class="page">'+i+'</a></li>')
+					.appendTo('#ul')
+					.attr('href',$.ctx()+'/customers/page/'+i)
+					.appendTo('#ul')
+					.click(function(){
+						member($(this).text());
+					});
+				}
+			}
+			if(pxy.existNext){
+				$('<li><a>&raquo;</a></li>')
+				.appendTo('#ul')
+				.click(function(){
+					member(pxy.nextBlock);
+				});
+			}
+		});
 	};
 	let call =()=>{
 /*		$('#loginbtn').click(e=>{
@@ -358,7 +402,6 @@ ad=(()=>{
 		.appendTo('.detail_cont');
 		$('#last_btn').click(e=>{
 			alert('버튼클릭');
-			/*auth();*/
 		});
 	};
 	return {init:init,admin:admin,buy:buy,member:member,call:call};

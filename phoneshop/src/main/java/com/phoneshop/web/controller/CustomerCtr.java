@@ -48,12 +48,17 @@ public class CustomerCtr {
 		System.out.println("시작값 :"+pxy.getStartRow());
 		System.out.println("마지막값 :"+pxy.getEndRow());
 		int totalcount = service.countCustomers();
-		map.put("total_cont", totalcount);
+		map.put("total_count", totalcount);
 		pxy.carryOut(map);
+		System.out.println(pxy.getStartRow());
+		System.out.println(pxy.getEndRow());
 		List<CustomerDTO> ls = service.findSomeCustomers(pxy);
+		
 		System.out.println("리스트에 들어가는 데이터 :"+ls);
 		map.clear();
 		map.put("ls", ls);
+		map.put("pxy",pxy);
+		System.out.println("page :"+page);
 		return map;
 		
 		
